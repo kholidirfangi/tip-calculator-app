@@ -1,0 +1,226 @@
+// reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// import google font
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+// color
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$strong-cyan: hsl(172, 67%, 45%);
+$white: hsl(0, 0%, 100%);
+
+body {
+  background-color: $light-grayish-cyan;
+  font-family: 'Space Mono', monospace;
+
+  h1 {
+    text-align: center;
+    padding: 2rem;
+    color: $very-dark-cyan;
+  }
+  .container {
+    width: 100%;
+    background-color: $white;
+    border-radius: 24px;
+    padding: 1rem;
+
+    section.choice {
+      padding: 2rem 0;
+      p,
+      label {
+        display: block;
+        color: $dark-grayish-cyan;
+        font-weight: 700;
+        margin-bottom: 0.3rem;
+      }
+
+      .wrap {
+        position: relative;
+
+        .icon-person,
+        .icon-dollar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 15px;
+        }
+      }
+
+      input#bill,
+      input {
+        display: block;
+        border: none;
+        background-color: $very-light-grayish-cyan;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100%;
+      }
+
+      input {
+        text-align: right;
+        color: $very-dark-cyan;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+
+      .select-tip,
+      .number-of-people {
+        margin-top: 2rem;
+      }
+
+      .list-tip {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin: 1rem 0;
+      }
+
+      .list-tip .tip {
+        background-color: $very-dark-cyan;
+        color: $white;
+        font-size: 1.3rem;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: right;
+        transition: 250ms;
+        text-align: center;
+      }
+
+      .tip:hover {
+        background-color: $strong-cyan;
+        cursor: pointer;
+        color: $very-dark-cyan;
+      }
+
+      .list-tip #custom {
+        text-align: right;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $dark-grayish-cyan;
+        background-color: $very-light-grayish-cyan;
+      }
+
+      .list-tip #custom::placeholder {
+        text-align: center;
+      }
+    }
+
+    section.card {
+      width: 100%;
+      background-color: $very-dark-cyan;
+      border-radius: 12px;
+      padding: 20px;
+      div {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+      }
+      div p {
+        color: $white;
+        font-size: 1rem;
+
+        span {
+          color: $grayish-cyan;
+          font-size: 0.8rem;
+        }
+      }
+
+      .bill-tip-amount,
+      .total-tip-amount {
+        color: $strong-cyan;
+        font-size: 2.5rem;
+      }
+
+      button {
+        border: none;
+        width: 100%;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: $strong-cyan;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 1rem;
+        transition: 250ms;
+      }
+
+      button:hover {
+        cursor: pointer;
+        background-color: $light-grayish-cyan;
+      }
+    }
+  }
+
+  // call in js
+  .active {
+    background-color: $light-grayish-cyan !important;
+    color: $very-dark-cyan !important;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+
+    a {
+      text-decoration: none;
+      color: $very-dark-cyan;
+    }
+
+    a:hover {
+      color: $strong-cyan;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  appearance: textfield;
+}
+input:focus {
+  outline: 2px solid $strong-cyan;
+}
+
+// desktop view
+@media screen and (min-width: 500px) {
+  body {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1.5rem;
+      gap: 2rem;
+      max-width: 800px;
+      height: max-content;
+      margin-left: auto;
+      margin-right: auto;
+
+      section.choice {
+        padding: 0;
+
+        .list-tip {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+      }
+
+      section.card {
+        button {
+          margin-top: 7em;
+        }
+      }
+    }
+  }
+}

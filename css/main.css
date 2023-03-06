@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+  font-family: "Space Mono", monospace;
+}
+body h1 {
+  text-align: center;
+  padding: 2rem;
+  color: hsl(183, 100%, 15%);
+}
+body .container {
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 24px;
+  padding: 1rem;
+}
+body .container section.choice {
+  padding: 2rem 0;
+}
+body .container section.choice p,
+body .container section.choice label {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+body .container section.choice .wrap {
+  position: relative;
+}
+body .container section.choice .wrap .icon-person,
+body .container section.choice .wrap .icon-dollar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
+body .container section.choice input#bill,
+body .container section.choice input {
+  display: block;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+body .container section.choice input {
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+body .container section.choice .select-tip,
+body .container section.choice .number-of-people {
+  margin-top: 2rem;
+}
+body .container section.choice .list-tip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+body .container section.choice .list-tip .tip {
+  background-color: hsl(183, 100%, 15%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: right;
+  transition: 250ms;
+  text-align: center;
+}
+body .container section.choice .tip:hover {
+  background-color: hsl(172, 67%, 45%);
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+}
+body .container section.choice .list-tip #custom {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  background-color: hsl(189, 41%, 97%);
+}
+body .container section.choice .list-tip #custom::-moz-placeholder {
+  text-align: center;
+}
+body .container section.choice .list-tip #custom::placeholder {
+  text-align: center;
+}
+body .container section.card {
+  width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 12px;
+  padding: 20px;
+}
+body .container section.card div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+body .container section.card div p {
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+}
+body .container section.card div p span {
+  color: hsl(184, 14%, 56%);
+  font-size: 0.8rem;
+}
+body .container section.card .bill-tip-amount,
+body .container section.card .total-tip-amount {
+  color: hsl(172, 67%, 45%);
+  font-size: 2.5rem;
+}
+body .container section.card button {
+  border: none;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: hsl(172, 67%, 45%);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1rem;
+  transition: 250ms;
+}
+body .container section.card button:hover {
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+}
+body .active {
+  background-color: hsl(185, 41%, 84%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+body footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+body footer a {
+  text-decoration: none;
+  color: hsl(183, 100%, 15%);
+}
+body footer a:hover {
+  color: hsl(172, 67%, 45%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+input:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+
+@media screen and (min-width: 500px) {
+  body .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+    max-width: 800px;
+    height: -moz-max-content;
+    height: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .container section.choice {
+    padding: 0;
+  }
+  body .container section.choice .list-tip {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  body .container section.card button {
+    margin-top: 7em;
+  }
+}/*# sourceMappingURL=main.css.map */
